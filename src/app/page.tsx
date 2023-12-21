@@ -31,16 +31,20 @@ export default function Home() {
   }
 
   return (
-    <div className="flex min-h-screen flex-row items-center justify-between p-24">
+    <div className="h-screen">
       {
         !selectedLanguage &&
-        Object.keys(LANGUAGE).map(language =>
-          <button key={LANGUAGE[language]} className="btn-primary btn border-2 p-4" onClick={() => onSelectLanguage(LANGUAGE[language])}>{language}</button>
-        )
+        <div className="h-full flex flex-row items-center justify-around p-4">
+          {
+            Object.keys(LANGUAGE).map(language =>
+              <button key={LANGUAGE[language]} className="btn-primary btn border-2 p-4" onClick={() => onSelectLanguage(LANGUAGE[language])}>{language}</button>
+            )
+          }
+        </div>
       }
       {
         selectedLanguage &&
-        <div>
+        <div className="h-full p-4">
           <Quiz question={getQuestionByLanguage()} />
         </div>
       }

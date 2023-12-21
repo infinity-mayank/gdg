@@ -12,6 +12,7 @@ export interface Question {
   Answer: string;
   Language: string;
   Level: string;
+  Code: boolean;
 }
 export default function Home() {
   const [selectedLanguage, setSelectedLanguage] = useState(null);

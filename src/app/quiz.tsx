@@ -23,10 +23,10 @@ export default function Quiz(question: { question: Question }) {
 
   return (
     <div className="flex h-full w-full gap-[52px] items-center">
-      <div className="h-screen overflow-scroll flex items-center basis-1/2">
-        <pre className="font-mono font-bold text-4xl text-wrap leading-[3rem]">{randomQuestion.question}</pre>
+      <div className="h-screen overflow-scroll flex items-center basis-3/5">
+        <pre className="font-mono font-thin text-4xl text-wrap leading-[3rem]">{randomQuestion.question}</pre>
       </div>
-      <div className="flex flex-col gap-[44px] basis-1/2">
+      <div className="flex flex-col gap-[44px] basis-2/5">
         <div>
           <label className="flex items-center text-4xl" key={randomQuestion.A}>
             <input

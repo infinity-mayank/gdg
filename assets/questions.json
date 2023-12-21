@@ -1,6 +1,6 @@
 [
   {
-    "question": "function sum(a, b) { return a + b; } sum(1, '2');",
+    "question": "What is the output of the following code?",
     "A": "Error",
     "B": "3",
     "C": "2",
@@ -8,10 +8,10 @@
     "Answer": "C",
     "Language": "Javascript",
     "Level": "Beginner",
-    "Code": true
+    "Code": "function sum(a, b) { return a + b; } sum(1, '2');"
   },
   {
-    "question": "let lang = 'javascript';\n(function(){\n   let lang = 'java';\n})();\n\nconsole.log(lang); (1)\n\n(function(){\n   var lang2 = 'java';\n})();\n\nconsole.log(lang2); (2)",
+    "question": "What is the output of the following code?",
     "A": "1. java\n2. error",
     "B": "1. javascript\n2. Error",
     "C": "1. java\n2. javascript",
@@ -19,10 +19,10 @@
     "Answer": "B",
     "Language": "Javascript",
     "Level": "Intermediate",
-    "Code": true
+    "Code": "let lang = 'javascript';\n(function(){\n   let lang = 'java';\n})();\n\nconsole.log(lang); (1)\n\n(function(){\n   var lang2 = 'java';\n})();\n\nconsole.log(lang2); (2)"
   },
   {
-    "question": "const obj = { a: 'one', b: 'two', a: 'three' }; console.log(obj);",
+    "question": "What is the output of the following code?",
     "A": "{ a: \"one\", b: \"two\", a: \"three\"}",
     "B": "{ a: \"one\", b: \"two\"}",
     "C": "{ a: \"three\", b: \"two\"}",
@@ -30,10 +30,10 @@
     "Answer": "C",
     "Language": "Javascript",
     "Level": "Beginner",
-    "Code": true
+    "Code": "const obj = { a: 'one', b: 'two', a: 'three' }; console.log(obj);"
   },
   {
-    "question": "(function immediateA(a) { return (function immediateB(b) { console.log(a); // What is logged? })(1); })(0);",
+    "question": "What is the output of the following code?",
     "A": "0",
     "B": "1",
     "C": "Error",
@@ -41,10 +41,10 @@
     "Answer": "A",
     "Language": "Javascript",
     "Level": "Intermediate",
-    "Code": true
+    "Code": "(function immediateA(a) { return (function immediateB(b) { console.log(a); // What is logged? })(1); })(0);"
   },
   {
-    "question": "for (var i = 0; i < 3; i++) { setTimeout(function log() { console.log(i); // What is logged? }, 1000); }",
+    "question": "What is the output of the following code?",
     "A": "\"0 1 2\"",
     "B": "\"0 0 0\"",
     "C": "\"1 1 1\"",
@@ -52,10 +52,10 @@
     "Answer": "D",
     "Language": "Javascript",
     "Level": "Intermediate",
-    "Code": true
+    "Code": "for (var i = 0; i < 3; i++) { setTimeout(function log() { console.log(i); // What is logged? }, 1000); }"
   },
   {
-    "question": "var num = 10;\n(()=>{\n   console.log(num);\n   var num = 20;\n   console.log(num);\n})();",
+    "question": "What is the output of the following code?",
     "A": "10 20",
     "B": "undefined undefined",
     "C": "20 20",
@@ -63,10 +63,10 @@
     "Answer": "D",
     "Language": "Javascript",
     "Level": "Intermediate",
-    "Code": true
+    "Code": "var num = 10;\n(()=>{\n   console.log(num);\n   var num = 20;\n   console.log(num);\n})();"
   },
   {
-    "question": "var func = [];\nfor (var i = 0; i < 5; i++) {\n  func[i] = function() {\n    console.log(i);\n  };\n}\nfunc[3]();",
+    "question": "What is the output of the following code?",
     "A": "3",
     "B": "2",
     "C": "5",
@@ -74,10 +74,10 @@
     "Answer": "C",
     "Language": "Javascript",
     "Level": "Intermediate",
-    "Code": true
+    "Code": "var func = [];\nfor (var i = 0; i < 5; i++) {\n  func[i] = function() {\n    console.log(i);\n  };\n}\nfunc[3]();"
   },
   {
-    "question": "const arrTest = [10, 20, 30, 40, 50][1, 3];\nconsole.log(arrTest);",
+    "question": "What is the output of the following code?",
     "A": "10",
     "B": "30",
     "C": "40",
@@ -85,7 +85,7 @@
     "Answer": "C",
     "Language": "Javascript",
     "Level": "Intermediate",
-    "Code": true
+    "Code": "const arrTest = [10, 20, 30, 40, 50][1, 3];\nconsole.log(arrTest);"
   },
   {
     "question": "Concerning the solid principle, which of these is odd?",
@@ -96,7 +96,7 @@
     "Answer": "D",
     "Language": "General",
     "Level": "Intermediate",
-    "Code": false
+    "Code": null
   },
   {
     "question": "Solid principles form a core philosophy for methodologies like ",
@@ -107,7 +107,7 @@
     "Answer": "C",
     "Language": "General",
     "Level": "Intermediate",
-    "Code": false
+    "Code": null
   },
   {
     "question": "In the single responsibility principle, the responsibility for a class is ",
@@ -118,7 +118,7 @@
     "Answer": "D",
     "Language": "General",
     "Level": "",
-    "Code": false
+    "Code": null
   },
   {
     "question": "In open/close principles, the software entities are open for equestiontension but closed for",
@@ -129,7 +129,7 @@
     "Answer": "C",
     "Language": "General",
     "Level": "Intermediate",
-    "Code": false
+    "Code": null
   },
   {
     "question": "Solid principle is also called",
@@ -140,7 +140,7 @@
     "Answer": "C",
     "Language": "General",
     "Level": "Intermediate",
-    "Code": false
+    "Code": null
   },
   {
     "question": "Who developed kotlin language?",
@@ -151,7 +151,7 @@
     "Answer": "B",
     "Language": "Kotlin",
     "Level": "Beginner",
-    "Code": false
+    "Code": null
   },
   {
     "question": "How to ensure null safety in Kotlin",
@@ -162,7 +162,7 @@
     "Answer": "A",
     "Language": "Kotlin",
     "Level": "Beginner",
-    "Code": false
+    "Code": null
   },
   {
     "question": "How to tell the compiler that the method is a static method and can be used in Java code?",
@@ -173,7 +173,7 @@
     "Answer": "C",
     "Language": "Kotlin",
     "Level": "Intermediate",
-    "Code": false
+    "Code": null
   },
   {
     "question": "What is the difference between a \"companion object\" and a regular object in Kotlin?",
@@ -184,7 +184,7 @@
     "Answer": "D",
     "Language": "Kotlin",
     "Level": "Intermediate",
-    "Code": false
+    "Code": null
   },
   {
     "question": "What is the keyword used to define a singleton class in Kotlin?",
@@ -195,7 +195,7 @@
     "Answer": "B",
     "Language": "Kotlin",
     "Level": "Beginner",
-    "Code": false
+    "Code": null
   },
   {
     "question": "How to make a kotlin class equestiontensible?",
@@ -206,7 +206,7 @@
     "Answer": "A",
     "Language": "Kotlin",
     "Level": "Beginner",
-    "Code": false
+    "Code": null
   },
   {
     "question": "What is the difference between a \"var\" and a \"val\" in Kotlin?",
@@ -217,7 +217,7 @@
     "Answer": "B",
     "Language": "Kotlin",
     "Level": "Beginner",
-    "Code": false
+    "Code": null
   },
   {
     "question": "How to check if a lateinit variable has been initialized or not: lateinit var name: String ?",
@@ -228,7 +228,7 @@
     "Answer": "C",
     "Language": "Kotlin",
     "Level": "Beginner",
-    "Code": false
+    "Code": null
   },
   {
     "question": "What are the ways through which we can create kotlin coroutines?",
@@ -239,7 +239,7 @@
     "Answer": "A",
     "Language": "Kotlin",
     "Level": "Intermediate",
-    "Code": false
+    "Code": null
   },
   {
     "question": "Which of the below is not a kotlin scope ?",
@@ -250,7 +250,7 @@
     "Answer": "D",
     "Language": "Kotlin",
     "Level": "Intermediate",
-    "Code": false
+    "Code": null
   },
   {
     "question": "You would like to print each score on its own line with its cardinal position. Without using var or val, which method allows iteration with both the value and its position?\n\nfun main() {\n  val highScores = listOf(4000, 2000, 10200, 12000, 9030)\n}",
@@ -261,7 +261,7 @@
     "Answer": "A",
     "Language": "Kotlin",
     "Level": "Beginner",
-    "Code": false
+    "Code": null
   },
   {
     "question": "Your application has an add function. How could you use its invoke methods and display the results?\nfun add(a: Int, b: Int): Int {\n  return a + b\n}",
@@ -272,7 +272,7 @@
     "Answer": "B",
     "Language": "Kotlin",
     "Level": "Beginner",
-    "Code": false
+    "Code": null
   },
   {
     "question": "Which line of code is a shorter, more idiomatic version of the displayed snippet?\nval len: Int = if (question != null) question.length else -1",
@@ -283,7 +283,7 @@
     "Answer": "D",
     "Language": "Kotlin",
     "Level": "Intermediate",
-    "Code": false
+    "Code": null
   },
   {
     "question": "Display even numbers from 1 to 10 with least amount of code in below for loop?\nfor (_____) {\n  println(\"There are $count employees.\")\n}",
@@ -294,7 +294,7 @@
     "Answer": "B",
     "Language": "Kotlin",
     "Level": "Intermediate",
-    "Code": false
+    "Code": null
   },
   {
     "question": "You have started a long-running coroutine whose job you have assigned to a variable named task. How could you abort this coroutine?\nval task = launch {\n  // long running job\n}",
@@ -305,7 +305,7 @@
     "Answer": "D",
     "Language": "Kotlin",
     "Level": "Intermediate",
-    "Code": false
+    "Code": null
   },
   {
     "question": "Number of primitive data types in Java are?",
@@ -317,7 +317,7 @@
     "Language": "Java",
     "Level": "Beginner",
     "FIELD9": "int, char, boolean, byte, long, float, short, double",
-    "Code": false
+    "Code": null
   },
   {
     "question": "What is the size of float and double in java?",
@@ -328,7 +328,7 @@
     "Answer": "A",
     "Language": "Java",
     "Level": "Beginner",
-    "Code": false
+    "Code": null
   },
   {
     "question": "Automatic type conversion is possible in which of the possible cases?",
@@ -339,10 +339,10 @@
     "Answer": "B",
     "Language": "Java",
     "Level": "Intermediate",
-    "Code": false
+    "Code": null
   },
   {
-    "question": "public class Foo{\n       public static void main(String[] args){\n                     byte question = 127;\n                     question++;\n                     question++;\n                     System.out.print(question);\n       }\n}",
+    "question": "What is the output of the following code?",
     "A": "-127",
     "B": "127",
     "C": "129",
@@ -351,7 +351,7 @@
     "Language": "Java",
     "Level": "Intermediate",
     "FIELD9": "Range of byte data in java is -128 to 127. But the byte data type in java is cyclic in nature",
-    "Code": true
+    "Code": "public class Foo{\n       public static void main(String[] args){\n                     byte question = 127;\n                     question++;\n                     question++;\n                     System.out.print(question);\n       }\n}"
   },
   {
     "question": "Select the valid statement",
@@ -362,7 +362,7 @@
     "Answer": "B",
     "Language": "Java",
     "Level": "Beginner",
-    "Code": false
+    "Code": null
   },
   {
     "question": "When an array is passed to a method, what does the method receive",
@@ -373,7 +373,7 @@
     "Answer": "A",
     "Language": "Java",
     "Level": "Intermediate",
-    "Code": false
+    "Code": null
   },
   {
     "question": "In which of the following is toString() method defined?",
@@ -384,10 +384,10 @@
     "Answer": "A",
     "Language": "Java",
     "Level": "Beginner",
-    "Code": false
+    "Code": null
   },
   {
-    "question": "Identify the output of the following program.\nString str = “abcde”;\nSystem.out.println(str.substring(1, 3));",
+    "question": "What is the output of the following code?",
     "A": "abc",
     "B": "bc",
     "C": "bcd",
@@ -395,10 +395,10 @@
     "Answer": "B",
     "Language": "Java",
     "Level": "Beginner",
-    "Code": true
+    "Code": "String str = “abcde”;\nSystem.out.println(str.substring(1, 3));"
   },
   {
-    "question": "How many string objects will be created in the following?\nString a = new String(“gdgpune23”);\nString b = new String(“gdgpune23”);\nStrinc c = “gdgpune23”;\nString d = “gdgpune23”;",
+    "question": "What is the output of the following code?",
     "A": "2",
     "B": "3",
     "C": "4",
@@ -406,7 +406,7 @@
     "Answer": "B",
     "Language": "Java",
     "Level": "Intermediate",
-    "Code": true
+    "Code": "String a = new String(“gdgpune23”);\nString b = new String(“gdgpune23”);\nStrinc c = “gdgpune23”;\nString d = “gdgpune23”;"
   },
   {
     "question": "Where does the system stores parameters and local variables whenever a method is invoked?",
@@ -417,7 +417,7 @@
     "Answer": "B",
     "Language": "Java",
     "Level": "Intermediate",
-    "Code": false
+    "Code": null
   },
   {
     "question": "Which class can compile given these declarations?\ninterface One {\n    default void method() {\n        System.out.println(\"One\");\n    }\n}\n\ninterface Two {\n    default void method () {\n        System.out.println(\"One\");\n    }\n}",
@@ -428,10 +428,10 @@
     "Answer": "D",
     "Language": "Java",
     "Level": "Intermediate",
-    "Code": false
+    "Code": null
   },
   {
-    "question": "What is the output of this code?\nclass Main {\n    public static void main (String[] args) {\n        List list = new ArrayList();\n        list.add(\"hello\");\n        list.add(2);\n        System.out.print(list.get(0) instanceof Object);\n        System.out.print(list.get(1) instanceof Integer);\n    }\n}",
+    "question": "What is the output of the following code?",
     "A": "The code does not compile.",
     "B": "truefalse",
     "C": "truetrue",
@@ -439,10 +439,10 @@
     "Answer": "C",
     "Language": "Java",
     "Level": "Beginner",
-    "Code": true
+    "Code": "class Main {\n    public static void main (String[] args) {\n        List list = new ArrayList();\n        list.add(\"hello\");\n        list.add(2);\n        System.out.print(list.get(0) instanceof Object);\n        System.out.print(list.get(1) instanceof Integer);\n    }\n}"
   },
   {
-    "question": "What is the result of this code?\nclass MainClass {\n    final String message() {\n        return \"Hello!\";\n    }\n}\n\nclass Main equestiontends MainClass {\n    public static void main(String[] args) {\n        System.out.println(message());\n    }\n\n     String message() {\n         return \"World!\";\n     }\n }",
+    "question": "What is the output of the following code?",
     "A": "It will not compile because of message() in main class.",
     "B": "\"Hello!\"",
     "C": "It will not compile because of message() in base class.",
@@ -450,10 +450,10 @@
     "Answer": "A",
     "Language": "Java",
     "Level": "Intermediate",
-    "Code": true
+    "Code": "class MainClass {\n    final String message() {\n        return \"Hello!\";\n    }\n}\n\nclass Main equestiontends MainClass {\n    public static void main(String[] args) {\n        System.out.println(message());\n    }\n\n     String message() {\n         return \"World!\";\n     }\n }"
   },
   {
-    "question": "Given this code, which command will output \"2\"?\nclass Main {\n    public static void main(String[] args) {\n        System.out.println(args[2]);\n    }\n}",
+    "question": "Given this code, which command will output?",
     "A": "java Main 1 2 \"3 4\" 5",
     "B": "java Main 1 \"2\" \"2\" 5",
     "C": "java Main.class 1 \"2\" 2 5",
@@ -461,10 +461,10 @@
     "Answer": "B",
     "Language": "Java",
     "Level": "Beginner",
-    "Code": true
+    "Code": "class Main {\n    public static void main(String[] args) {\n        System.out.println(args[2]);\n    }\n}"
   },
   {
-    "question": "What is the output of this code?\nclass Main {\n    public static void main(String[] args){\n        int a = 123451234512345;\n        System.out.println(a);\n    }\n}",
+    "question": "What is the output of the following code?",
     "A": "\"123451234512345\"",
     "B": "Nothing - this will not compile.",
     "C": "a negative integer value",
@@ -472,7 +472,7 @@
     "Answer": "B",
     "Language": "Java",
     "Level": "Intermediate",
-    "Code": true
+    "Code": "class Main {\n    public static void main(String[] args){\n        int a = 123451234512345;\n        System.out.println(a);\n    }}"
   },
   {
     "question": "What is JavaScript?",
@@ -483,7 +483,7 @@
     "Answer": "B",
     "Language": "Javascript",
     "Level": "",
-    "Code": false
+    "Code": null
   },
   {
     "question": "How do you declare a variable in JavaScript?",
@@ -494,7 +494,7 @@
     "Answer": "D",
     "Language": "Javascript",
     "Level": "",
-    "Code": false
+    "Code": null
   },
   {
     "question": "How do you comment in JavaScript?",
@@ -505,7 +505,7 @@
     "Answer": "A",
     "Language": "Javascript",
     "Level": "",
-    "Code": false
+    "Code": null
   },
   {
     "question": "What is the purpose of the `this` keyword in JavaScript?",
@@ -516,7 +516,7 @@
     "Answer": "B",
     "Language": "Javascript",
     "Level": "",
-    "Code": false
+    "Code": null
   },
   {
     "question": "What is a closure in JavaScript?",
@@ -527,7 +527,7 @@
     "Answer": "C",
     "Language": "Javascript",
     "Level": "",
-    "Code": false
+    "Code": null
   },
   {
     "question": "What is the purpose of the `map` function in JavaScript?",
@@ -538,7 +538,7 @@
     "Answer": "A",
     "Language": "Javascript",
     "Level": "",
-    "Code": false
+    "Code": null
   },
   {
     "question": "How do you check the type of a variable in JavaScript?",
@@ -549,7 +549,7 @@
     "Answer": "B",
     "Language": "Javascript",
     "Level": "",
-    "Code": false
+    "Code": null
   },
   {
     "question": "What is the purpose of the `setTimeout` function?",
@@ -560,7 +560,7 @@
     "Answer": "A",
     "Language": "Javascript",
     "Level": "",
-    "Code": false
+    "Code": null
   },
   {
     "question": "How do you create an array in JavaScript?",
@@ -571,7 +571,7 @@
     "Answer": "B",
     "Language": "Javascript",
     "Level": "",
-    "Code": false
+    "Code": null
   },
   {
     "question": "Equestionplain the concept of event delegation.",
@@ -582,7 +582,7 @@
     "Answer": "C",
     "Language": "Javascript",
     "Level": "",
-    "Code": false
+    "Code": null
   },
   {
     "question": "What is the use of the `Promise` object in JavaScript?",
@@ -593,7 +593,7 @@
     "Answer": "B",
     "Language": "Javascript",
     "Level": "",
-    "Code": false
+    "Code": null
   },
   {
     "question": "What is the purpose of the `JSON.stringify` method?",
@@ -604,7 +604,7 @@
     "Answer": "A",
     "Language": "Javascript",
     "Level": "",
-    "Code": false
+    "Code": null
   },
   {
     "question": "Equestionplain the concept of hoisting.",
@@ -615,7 +615,7 @@
     "Answer": "B",
     "Language": "Javascript",
     "Level": "",
-    "Code": false
+    "Code": null
   },
   {
     "question": "What is the `addEventListener` method used for?",
@@ -626,7 +626,7 @@
     "Answer": "B",
     "Language": "Javascript",
     "Level": "",
-    "Code": false
+    "Code": null
   },
   {
     "question": "How do you convert a string to a number in JavaScript?",
@@ -637,7 +637,7 @@
     "Answer": "D",
     "Language": "Javascript",
     "Level": "",
-    "Code": false
+    "Code": null
   },
   {
     "question": "What is the purpose of the `localStorage` object?",
@@ -648,7 +648,7 @@
     "Answer": "B",
     "Language": "Javascript",
     "Level": "",
-    "Code": false
+    "Code": null
   },
   {
     "question": "Equestionplain the concept of the event loop.",
@@ -659,7 +659,7 @@
     "Answer": "B",
     "Language": "Javascript",
     "Level": "",
-    "Code": false
+    "Code": null
   },
   {
     "question": "What is the purpose of the `bind` method in JavaScript?",
@@ -670,7 +670,7 @@
     "Answer": "C",
     "Language": "Javascript",
     "Level": "",
-    "Code": false
+    "Code": null
   },
   {
     "question": "What is a callback function?",
@@ -681,7 +681,7 @@
     "Answer": "B",
     "Language": "Javascript",
     "Level": "",
-    "Code": false
+    "Code": null
   },
   {
     "question": "How do you iterate over an object's properties in JavaScript?",
@@ -692,7 +692,7 @@
     "Answer": "A",
     "Language": "Javascript",
     "Level": "",
-    "Code": false
+    "Code": null
   },
   {
     "question": "What is the purpose of the `async` and `await` keywords?",
@@ -703,7 +703,7 @@
     "Answer": "B",
     "Language": "Javascript",
     "Level": "",
-    "Code": false
+    "Code": null
   },
   {
     "question": "How do you create an object in JavaScript?",
@@ -714,7 +714,7 @@
     "Answer": "B",
     "Language": "Javascript",
     "Level": "",
-    "Code": false
+    "Code": null
   },
   {
     "question": "What is the purpose of the `Object.keys()` method?",
@@ -725,6 +725,6 @@
     "Answer": "A",
     "Language": "Javascript",
     "Level": "",
-    "Code": false
+    "Code": null
   }
 ]

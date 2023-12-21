@@ -38,7 +38,7 @@ export default function Home() {
         <div className="h-full flex flex-row items-center justify-around p-4">
           {
             Object.keys(LANGUAGE).map(language =>
-              <button key={LANGUAGE[language]} className="btn-primary btn border-2 p-4" onClick={() => onSelectLanguage(LANGUAGE[language])}>{language}</button>
+              <button key={LANGUAGE[language]} className="btn-primary btn border-2 text-3xl font-bold p-6" onClick={() => onSelectLanguage(LANGUAGE[language])}>{language}</button>
             )
           }
         </div>

@@ -21,6 +21,8 @@ const Congratulation = () => {
 export default function Quiz(question: { question: Question }) {
   const [selectedOption, setSelectedOption] = useState(0);
   const [rightAnswer, setRightAnswer] = useState(false)
+  const [wrongAnswer, setWrongAnswer] = useState(false)
+  
   const randomQuestion = question.question;
 
   const handleOptionChange = (option) => {
@@ -33,14 +35,35 @@ export default function Quiz(question: { question: Question }) {
     if(isWinner) {
       setRightAnswer(true)
     } else {
-      setRightAnswer(false)
-      alert('Sorry! your answer is incorrect.');
+      setWrongAnswer(true)
     }
   }
 
   return (
     <>
-      {rightAnswer && <Congratulation />}
+      {
+        rightAnswer &&
+          <div>
+              <div className="container">
+                <h2 className="title">
+                  <span className="title-word title-word-1 mr-4">Congratulation</span>
+                  <span className="title-word title-word-2 mr-4">you have</span>
+                  <span className="title-word title-word-3 mr-4">won</span>
+                  <span className="title-word title-word-4">goodies!</span>
+                </h2>
+              </div>
+              <Congratulation />
+          </div>
+      }
+      {
+        wrongAnswer &&
+        <div className="wrong-answer" id="ui">
+          {
+            new Array(40).fill('').map((_,i) => <div key={`wrong-answer-${i}`} className="text">Wrong Answer :(</div>)
+          }
+          
+        </div>
+      }
       <div className="flex h-full w-full gap-[52px] items-center">
         <div className="h-screen overflow-scroll flex flex-col justify-center basis-3/5">
         { randomQuestion.question && <pre className="font-mono font-thin text-4xl text-wrap leading-[3rem]">{randomQuestion.question}</pre> }

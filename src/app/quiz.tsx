@@ -4,6 +4,8 @@ import {Question} from "@/app/page";
 import {useState} from "react";
 import useWindowSize from 'react-use/lib/useWindowSize'
 import Confetti from 'react-confetti'
+import { CodeBlock, dracula } from 'react-code-blocks';
+
 
 const Congratulation = () => {
   const { width, height } = useWindowSize()
@@ -40,8 +42,20 @@ export default function Quiz(question: { question: Question }) {
     <>
       {rightAnswer && <Congratulation />}
       <div className="flex h-full w-full gap-[52px] items-center">
-        <div className="h-screen overflow-scroll flex items-center basis-3/5">
-          <pre className="font-mono font-thin text-4xl text-wrap leading-[3rem]">{randomQuestion.question}</pre>
+        <div className="h-screen overflow-scroll flex flex-col justify-center basis-3/5">
+        { randomQuestion.question && <pre className="font-mono font-thin text-4xl text-wrap leading-[3rem]">{randomQuestion.question}</pre> }
+          {
+            randomQuestion.Code &&
+            <div className="text-4xl">
+              <CodeBlock
+                text={randomQuestion.Code}
+                showLineNumbers={true}
+                wrapLines
+                
+                theme={dracula}
+              />
+            </div>
+          }
         </div>
         <div className="flex flex-col gap-[44px] basis-2/5">
           <div>

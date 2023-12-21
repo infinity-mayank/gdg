@@ -33,7 +33,7 @@ export default function RootLayout({
               <li></li>
               <li></li>
           </ul>
-        </div >
+        </div>
       </body>
     </html>
   )

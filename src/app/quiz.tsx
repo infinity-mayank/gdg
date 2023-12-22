@@ -6,6 +6,11 @@ import useWindowSize from 'react-use/lib/useWindowSize'
 import Confetti from 'react-confetti'
 import { CodeBlock, dracula } from 'react-code-blocks';
 
+const BackIcon = () => 
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M20.7076 25.2924C20.8005 25.3854 20.8742 25.4957 20.9244 25.6171C20.9747 25.7384 21.0006 25.8686 21.0006 25.9999C21.0006 26.1313 20.9747 26.2614 20.9244 26.3828C20.8742 26.5042 20.8005 26.6145 20.7076 26.7074C20.6146 26.8004 20.5043 26.8741 20.383 26.9243C20.2616 26.9746 20.1314 27.0005 20.0001 27.0005C19.8687 27.0005 19.7386 26.9746 19.6172 26.9243C19.4958 26.8741 19.3855 26.8004 19.2926 26.7074L9.29255 16.7074C9.19958 16.6146 9.12582 16.5043 9.07549 16.3829C9.02517 16.2615 8.99927 16.1314 8.99927 15.9999C8.99927 15.8685 9.02517 15.7384 9.07549 15.617C9.12582 15.4956 9.19958 15.3853 9.29255 15.2924L19.2926 5.29245C19.4802 5.10481 19.7347 4.99939 20.0001 4.99939C20.2654 4.99939 20.5199 5.1048 20.7076 5.29245C20.8952 5.48009 21.0006 5.73458 21.0006 5.99995C21.0006 6.26531 20.8952 6.5198 20.7076 6.70745L11.4138 15.9999L20.7076 25.2924Z" fill="white"/>
+</svg>
+
 
 const Congratulation = () => {
   const { width, height } = useWindowSize()
@@ -16,6 +21,8 @@ const Congratulation = () => {
     />
   )
 }
+
+const Question = ({isSelected, text}: {isSelected: boolean, text: string}) => <span className={`${isSelected ? 'text-[#FFE500]' : ''}`}>{text}</span>
 
 
 export default function Quiz(question: { question: Question }) {
@@ -64,80 +71,87 @@ export default function Quiz(question: { question: Question }) {
           
         </div>
       }
-      <div className="flex h-full w-full gap-[52px] items-center">
-        <div className="h-screen overflow-scroll flex flex-col justify-center basis-3/5">
-        { randomQuestion.question && <pre className="font-mono font-thin text-4xl text-wrap leading-[3rem]">{randomQuestion.question}</pre> }
-          {
-            randomQuestion.Code &&
-            <div className="text-4xl">
-              <CodeBlock
-                text={randomQuestion.Code}
-                showLineNumbers={true}
-                wrapLines
-                
-                theme={dracula}
-              />
+      {
+        !wrongAnswer && !rightAnswer && <div className="p-12">
+          <div className="absolute z-10">
+            <button type="button" className="text-xl text-white bg-[#1F2937] text-white rounded-2xl pl-2 pr-5 py-2.5" onClick={onBackClick}>
+              <span className="flex"><BackIcon/>{" Back"}</span>
+            </button>
+          </div>
+          <div className="flex h-full w-full gap-[4rem] items-center">
+            <div className="h-screen overflow-scroll flex flex-col justify-center basis-3/5">
+              { randomQuestion.question && <label className="text-[#FFE500] text-4xl text-wrap leading-[3rem]">{randomQuestion.question}</label> }
+              {
+                randomQuestion.Code &&
+                <div className="text-4xl">
+                  <CodeBlock
+                    text={randomQuestion.Code}
+                    showLineNumbers={true}
+                    wrapLines
+                    theme={dracula}
+                  />
+                </div>
+              }
             </div>
-          }
-        </div>
-        <div className="flex flex-col gap-[44px] basis-2/5">
-          <div>
-            <label className="flex items-center text-4xl" key={randomQuestion.A}>
-              <input
-                className="mr-4 h-8 w-8"
-                type="radio"
-                value="A"
-                checked={selectedOption == randomQuestion.A}
-                onChange={() => handleOptionChange(randomQuestion.A)}
-              />
-              {randomQuestion.A}
-            </label>
-          </div>
-          <div>
-            <label className="flex items-center text-4xl" key={randomQuestion.B}>
-              <input
-                className="mr-4 h-8 w-8"
-                type="radio"
-                value="B"
-                checked={selectedOption == randomQuestion.B}
-                onChange={() => handleOptionChange(randomQuestion.B)}
-              />
-              {randomQuestion.B}
-            </label>
-          </div>
-          <div>
-            <label className="flex items-center text-4xl" key={randomQuestion.C}>
-              <input
-                className="mr-4 h-8 w-8"
-                type="radio"
-                value="C"
-                checked={selectedOption == randomQuestion.C}
-                onChange={() => handleOptionChange(randomQuestion.C)}
-              />
-              {randomQuestion.C}
-            </label>
-          </div>
-          <div>
-            <label className="flex items-center text-4xl" key={randomQuestion.D}>
-              <input
-                className="mr-4 h-8 w-8"
-                type="radio"
-                value="D"
-                checked={selectedOption == randomQuestion.D}
-                onChange={() => handleOptionChange(randomQuestion.D)}
-              />
-              {randomQuestion.D}
-            </label>
-          </div>
+            <div className="flex flex-col gap-[44px] basis-2/5">
+              <div>
+                <label className="text-2xl" key={randomQuestion.A}>
+                  <input
+                    className="mr-4 h-6 w-6 accent-[#FFE500]"
+                    type="radio"
+                    value="A"
+                    checked={selectedOption == randomQuestion.A}
+                    onChange={() => handleOptionChange(randomQuestion.A)}
+                  />
+                  <Question text={randomQuestion.A} isSelected={selectedOption == randomQuestion.A}/>
+                </label>
+              </div>
+              <div>
+                <label className="text-2xl" key={randomQuestion.B}>
+                  <input
+                    className="mr-4 h-6 w-6 accent-[#FFE500]"
+                    type="radio"
+                    value="B"
+                    checked={selectedOption == randomQuestion.B}
+                    onChange={() => handleOptionChange(randomQuestion.B)}
+                  />
+                  <Question text={randomQuestion.B} isSelected={selectedOption == randomQuestion.B}/>
+                </label>
+              </div>
+              <div>
+                <label className="text-2xl" key={randomQuestion.C}>
+                  <input
+                    className="mr-4 h-6 w-6 accent-[#FFE500]"
+                    type="radio"
+                    value="C"
+                    checked={selectedOption == randomQuestion.C}
+                    onChange={() => handleOptionChange(randomQuestion.C)}
+                  />
+                  <Question text={randomQuestion.C} isSelected={selectedOption == randomQuestion.C}/>
+                </label>
+              </div>
+              <div>
+                <label className="text-2xl" key={randomQuestion.D}>
+                  <input
+                    className="mr-4 h-6 w-6 accent-[#FFE500]"
+                    type="radio"
+                    value="D"
+                    checked={selectedOption == randomQuestion.D}
+                    onChange={() => handleOptionChange(randomQuestion.D)}
+                  />
+                  <Question text={randomQuestion.D} isSelected={selectedOption == randomQuestion.D}/>
+                </label>
+              </div>
 
-          <div className="flex justify-end">
-            <div className="mr-6">
-              <button  type="button" className="text-4xl text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800" onClick={onSubmit}>Submit</button>
+              <div className="flex justify-end">
+                <div className="mr-6">
+                  <button  type="button" disabled={!selectedOption} className="text-xl bg-[#FFE500] text-[#0f0f23] disabled:brightness-50	rounded-2xl px-5 py-2.5" onClick={onSubmit}>Submit</button>
+                </div>
+              </div>
             </div>
-            <button type="button" className="text-4xl text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700" onClick={onBackClick}>Back</button>
           </div>
         </div>
-      </div>
+      }
     </>
   );
 }

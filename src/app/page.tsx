@@ -49,7 +49,7 @@ export default function Home() {
 
   return (
     <div className="h-screen overflow-hidden">
-      <div className="absolute z-10 left-[40%] top-[2rem]">
+      <div className="cursor-pointer absolute z-10 left-[40%] top-[2rem]" onClick={()=>window.location.reload()}>
         <TechnogiseLogo/>
       </div>
       {

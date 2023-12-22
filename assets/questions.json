@@ -143,26 +143,26 @@
     "Code": null
   },
   {
-    "question": "Who developed kotlin language?",
-    "A": "Google",
-    "B": "JetBrains",
-    "C": "Facebook",
-    "D": "Open source community",
-    "Answer": "B",
+    "question": "What will happen when you try to build and run this code snippet?",
+    "A": "A syntax error occurs due to the line SpecialFunction()().",
+    "B": "The message \"An Error occurred\" is displayed.",
+    "C": "The message \"Invoked from an instance.\" is displayed. // the second \"()\" is equals to .invoke()\n",
+    "D": "A compile error occurs. You cannot override the invoke() method.",
+    "Answer": "C",
     "Language": "Kotlin",
-    "Level": "Beginner",
-    "Code": null
+    "Level": "Intermediate",
+    "Code": "class SpecialFunction : () -> Unit {\n  override fun invoke() {\n    println(\"Invoked from an instance.\")\n  }\n}\nfun main() {\n  try { SpecialFunction()() }\n  catch (ex: Exception) { println(\"An error occurred\") }\n}"
   },
   {
-    "question": "How to ensure null safety in Kotlin",
-    "A": "var name: String? = \"Google\"",
-    "B": "var name: String = \"Google\"",
-    "C": "val name: String? = \"Google\"",
-    "D": "None of the above",
-    "Answer": "A",
+    "question": "Which line converts the binaryStr, which contains only 0s and 1s, to an integer representing its decimal value?",
+    "A": "val myInt = toInt(binaryStr)",
+    "B": "val myInt = binaryStr.toInt(\"0b\")",
+    "C": "val myInt = binaryStr.toInt()",
+    "D": "val myInt = binaryStr.toInt(2)",
+    "Answer": "D",
     "Language": "Kotlin",
-    "Level": "Beginner",
-    "Code": null
+    "Level": "Intermediate",
+    "Code": "val binaryStr = \"00001111\"\n"
   },
   {
     "question": "How to tell the compiler that the method is a static method and can be used in Java code?",
@@ -176,48 +176,48 @@
     "Code": null
   },
   {
-    "question": "What is the difference between a \"companion object\" and a regular object in Kotlin?",
-    "A": "A companion object is a singleton object, while a regular object is not",
-    "B": "A companion object has access to the private members of a class, while a regular object does not",
-    "C": "A companion object is defined inside a class, while a regular object is not",
-    "D": "All of the above",
-    "Answer": "D",
+    "question": "You have written a function, sort(), that should accept only collections that implement the Comparable interface. How can you restrict the function?",
+    "A": "Add <T -> Comparable<T>> between the fun keyword and the function name",
+    "B": "Add Comparable<T> between the fun keyword and the function name",
+    "C": "Add <T : Comparable<T>> between the fun keyword and the function name",
+    "D": "Add <T where Comparable<T>> between the fun keyword and the function name",
+    "Answer": "C",
+    "Language": "Kotlin",
+    "Level": "Intermediate",
+    "Code": "fun sort(list: List<T>): List <T> {\n    return list.sorted()\n}"
+  },
+  {
+    "question": "Which line of code shows how to create a finite sequence of the numbers 1 to 99 and then convert it into a list?",
+    "A": "val lessThan99 = generateSequence(1){ if (it < 99) it + 1 else null }.toList().",
+    "B": "val lessThan99 = generateSequence(0){ if (it < 99)}.toList().",
+    "C": "val lessThan99 = generateSequence(1..9){ if (it < 99) it + 1 else null }.toList().",
+    "D": "val lessThan99 = listOf{1..99}.asSequence().toList()\n",
+    "Answer": "A",
     "Language": "Kotlin",
     "Level": "Intermediate",
     "Code": null
   },
   {
-    "question": "What is the keyword used to define a singleton class in Kotlin?",
-    "A": "singleton",
-    "B": "object",
-    "C": "static",
-    "D": "final",
-    "Answer": "B",
+    "question": "What is the output of this code?",
+    "A": "The length of the quote is The eagle has landed.",
+    "B": "A compilation error is displayed.",
+    "C": "The length of the quote is 21",
+    "D": "The length of the quote is The eagle has landed..length",
+    "Answer": "D",
     "Language": "Kotlin",
-    "Level": "Beginner",
-    "Code": null
+    "Level": "Intermediate",
+    "Code": "val quote = \"The eagle has landed.\"\nprintln(\"The length of the quote is $quote.length\")"
   },
   {
-    "question": "How to make a kotlin class equestiontensible?",
-    "A": "Add 'open' keyword before class declaration.",
-    "B": "Add 'override' keyword before class declaration",
-    "C": "Add 'object' keyword before class declaration.",
-    "D": "None of the above",
-    "Answer": "A",
+    "question": "You have an unordered list of high scores. Which is the simple method to sort the highScores in descending order?",
+    "A": ".sortedByDescending()",
+    "B": ".descending()",
+    "C": ".sortedDescending()",
+    "D": ".sort(\"DESC\")",
+    "Answer": "C",
     "Language": "Kotlin",
-    "Level": "Beginner",
-    "Code": null
-  },
-  {
-    "question": "What is the difference between a \"var\" and a \"val\" in Kotlin?",
-    "A": "\"var\" is a constant, while \"val\" is a variable",
-    "B": "\"var\" is a mutable variable, while \"val\" is an immutable variable",
-    "C": "\"val\" is a mutable variable, while \"var\" is an immutable variable",
-    "D": "\"val\" is a constant, while \"var\" is a variable",
-    "Answer": "B",
-    "Language": "Kotlin",
-    "Level": "Beginner",
-    "Code": null
+    "Level": "Intermediate",
+    "Code": "fun main() {\n    val highScores = listOf(4000, 2000, 10200, 12000, 9030)"
   },
   {
     "question": "How to check if a lateinit variable has been initialized or not: lateinit var name: String ?",
@@ -242,37 +242,37 @@
     "Code": null
   },
   {
-    "question": "Which of the below is not a kotlin scope ?",
-    "A": "let",
-    "B": "with",
-    "C": "apply",
-    "D": "while",
+    "question": "Which line of code shows how to call a Fibonacci function, bypass the first three elements, grab the next six, and sort the elements in descending order?",
+    "A": "val sorted = fibonacci().skip(3).take(6).sortedDescending().toList()",
+    "B": "val sorted = fibonacci().skip(3).take(6).sortedByDescending().toList()",
+    "C": "val sorted = fibonacci().skip(3).limit(6).sortedByDescending().toList()",
+    "D": "val sorted = fibonacci().drop(3).take(6).sortedDescending().toList()",
     "Answer": "D",
     "Language": "Kotlin",
     "Level": "Intermediate",
     "Code": null
   },
   {
-    "question": "You would like to print each score on its own line with its cardinal position. Without using var or val, which method allows iteration with both the value and its position?\n\nfun main() {\n  val highScores = listOf(4000, 2000, 10200, 12000, 9030)\n}",
-    "A": ".withIndequestion()",
-    "B": ".forEach()",
-    "C": ".forEachIndequestioned()",
-    "D": ".forIndequestiones()",
-    "Answer": "A",
+    "question": "You have two arrays, a and b. Which line combines a and b as a list containing the contents of both?",
+    "A": "val c = list of (a, b)",
+    "B": "val c = a + b",
+    "C": "val c = listOf(a+b)",
+    "D": "val c = listOf(*a, *b)",
+    "Answer": "D",
     "Language": "Kotlin",
-    "Level": "Beginner",
-    "Code": null
+    "Level": "Intermediate",
+    "Code": "val a = arrayOf(1, 2, 3)\nval b = arrayOf(100, 200, 3000)"
   },
   {
-    "question": "Your application has an add function. How could you use its invoke methods and display the results?\nfun add(a: Int, b: Int): Int {\n  return a + b\n}",
-    "A": "println(add(5,10).invoke())",
-    "B": "println(::add.invoke(5, 10))",
-    "C": "println(::add.invoke{5, 10})",
-    "D": "println(add.invoke(5,10))",
-    "Answer": "B",
+    "question": "This code occasionally throws a null pointer exception (NPE). How can you change the code so it never throws as NPE?",
+    "A": "Replace !!. with ?.",
+    "B": "Replace !!. with ?:.",
+    "C": "Surround the line with a try/catch block.",
+    "D": "Replace !!. with ?.let",
+    "Answer": "A",
     "Language": "Kotlin",
-    "Level": "Beginner",
-    "Code": null
+    "Level": "Intermediate",
+    "Code": "println(\"length of First Name = ${firstName!!.length}\")"
   },
   {
     "question": "Which line of code is a shorter, more idiomatic version of the displayed snippet?\nval len: Int = if (question != null) question.length else -1",
@@ -308,38 +308,37 @@
     "Code": null
   },
   {
-    "question": "Number of primitive data types in Java are?",
-    "A": "6",
-    "B": "7",
-    "C": "8",
-    "D": "9",
-    "Answer": "C",
-    "Language": "Java",
-    "Level": "Beginner",
-    "FIELD9": "int, char, boolean, byte, long, float, short, double",
-    "Code": null
-  },
-  {
-    "question": "What is the size of float and double in java?",
-    "A": "32, 64",
-    "B": "32, 32",
-    "C": "64, 64",
-    "D": "64, 32",
+    "question": "What is the output of this code?",
+    "A": "It will not compile because of line 4.",
+    "B": "It will not compile because of line 3.",
+    "C": "123",
+    "D": "1234",
     "Answer": "A",
     "Language": "Java",
-    "Level": "Beginner",
-    "Code": null
+    "Level": "Intermediate",
+    "Code": "class Main {\n  public static void main (String[] args) {\n    int array[] = {1, 2, 3, 4};\n    for (int i = 0; i < array.size(); i++) {\n       System.out.print(array[i]);\n    }\n  }\n}"
   },
   {
-    "question": "Automatic type conversion is possible in which of the possible cases?",
-    "A": "byte to int",
-    "B": "int to long",
-    "C": "long to int",
-    "D": "short to int",
+    "question": "What does the following code print?",
+    "A": "CD",
+    "B": "CDE",
+    "C": "D",
+    "D": "abcde",
+    "Answer": "D",
+    "Language": "Java",
+    "Level": "Intermediate",
+    "Code": "String str = \"abcde\";\nstr.trim();\nstr.toUpperCase();\nstr.substring(3, 4);\nSystem.out.println(str);"
+  },
+  {
+    "question": "What is the result of this code?",
+    "A": "It will show a stack trace with a runtime exception.",
+    "B": "java.lang.Exception",
+    "C": "It will run and throw an exception.",
+    "D": "It will not compile.",
     "Answer": "B",
     "Language": "Java",
     "Level": "Intermediate",
-    "Code": null
+    "Code": "class Main {\n    public static void main (String[] args){\n        System.out.println(print(1));\n    }\n    static Exception print(int i){\n        if (i>0) {\n            return new Exception();\n        } else {\n            throw new RuntimeException();\n        }\n    }\n}"
   },
   {
     "question": "What is the output of the following code?",
@@ -354,37 +353,37 @@
     "Code": "public class Foo{\n       public static void main(String[] args){\n                     byte question = 127;\n                     question++;\n                     question++;\n                     System.out.print(question);\n       }\n}"
   },
   {
-    "question": "Select the valid statement",
-    "A": "char[] ch = new char(5)",
-    "B": "char[] ch = new char[5]",
-    "C": "char[] ch = new char()",
-    "D": "char[] ch = new char[]",
+    "question": "Given this code, which command will output \"2\"?",
+    "A": "java Main 1 2 \"3 4\" 5",
+    "B": "java Main 1 \"2\" \"2\" 5",
+    "C": "java Main.class 1 \"2\" 2 5",
+    "D": "java Main 1 \"2\" \"3 4\" 5",
     "Answer": "B",
     "Language": "Java",
-    "Level": "Beginner",
-    "Code": null
+    "Level": "Intermediate",
+    "Code": "class Main {\n    public static void main(String[] args) {\n        System.out.println(args[2]);\n    }\n}"
   },
   {
-    "question": "When an array is passed to a method, what does the method receive",
-    "A": "The reference of the array",
-    "B": "A clone of the array obj",
-    "C": "Length of the array",
-    "D": "None of the above",
-    "Answer": "A",
+    "question": "Which code snippet is valid?",
+    "A": "ArrayList<String> words = new ArrayList<String>(){\"Hello\", \"World\"};\n",
+    "B": "ArrayList words = Arrays.asList(\"Hello\", \"World\");",
+    "C": "ArrayList<String> words = {\"Hello\", \"World\"};",
+    "D": "ArrayList<String> words = new ArrayList<>(Arrays.asList(\"Hello\", \"World\"));",
+    "Answer": "D",
     "Language": "Java",
     "Level": "Intermediate",
     "Code": null
   },
   {
-    "question": "In which of the following is toString() method defined?",
-    "A": "java.lang.Object",
-    "B": "java.lang.String",
-    "C": "java.lang.util",
-    "D": "None of the above",
-    "Answer": "A",
+    "question": "What is the output of this code?",
+    "A": "It will not compile.",
+    "B": "\"Hello World!\"",
+    "C": "\"hello\"",
+    "D": "???? The code effectively converts the initial \"hello\" into \"HelloWorld!\" by deleting the first character, inserting \"H\" at the beginning, and appending \" World!\" to the end.",
+    "Answer": "B",
     "Language": "Java",
-    "Level": "Beginner",
-    "Code": null
+    "Level": "Intermediate",
+    "Code": "class Main {\n  public static void main(String[] args) {\n    StringBuilder sb = new StringBuilder(\"hello\");\n    sb.deleteCharAt(0).insert(0, \"H\").append(\" World!\");\n    System.out.println(sb);\n  }\n}"
   },
   {
     "question": "What is the output of the following code?",
@@ -409,15 +408,15 @@
     "Code": "String a = new String(“gdgpune23”);\nString b = new String(“gdgpune23”);\nStrinc c = “gdgpune23”;\nString d = “gdgpune23”;"
   },
   {
-    "question": "Where does the system stores parameters and local variables whenever a method is invoked?",
-    "A": "Heap",
-    "B": "Stack",
-    "C": "Array",
-    "D": "Tree",
-    "Answer": "B",
+    "question": "What is the output?",
+    "A": "1 3 2 4",
+    "B": "4 2 3 1",
+    "C": "1 2 3 4",
+    "D": "4 3 2 1",
+    "Answer": "C",
     "Language": "Java",
     "Level": "Intermediate",
-    "Code": null
+    "Code": "import java.util.*;\n\npublic class Main {\n    public static void main(String[] args)\n    {\n        PriorityQueue<Integer> queue = new PriorityQueue<>();\n        queue.add(4);\n        queue.add(3);\n        queue.add(2);\n        queue.add(1);\n\n        while (queue.isEmpty() == false) {\n            System.out.printf(\"%d\", queue.remove());\n        }\n    }\n}"
   },
   {
     "question": "Which class can compile given these declarations?\ninterface One {\n    default void method() {\n        System.out.println(\"One\");\n    }\n}\n\ninterface Two {\n    default void method () {\n        System.out.println(\"One\");\n    }\n}",

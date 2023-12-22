@@ -8,7 +8,7 @@
     "Answer": "C",
     "Language": "Javascript",
     "Level": "Beginner",
-    "Code": "function sum(a, b) { return a + b; } sum(1, '2');"
+    "Code": "function sum(a, b) { return a + b; }\n sum(1, '2');"
   },
   {
     "question": "What is the output of the following code?",
@@ -30,7 +30,7 @@
     "Answer": "C",
     "Language": "Javascript",
     "Level": "Beginner",
-    "Code": "const obj = { a: 'one', b: 'two', a: 'three' }; console.log(obj);"
+    "Code": "const obj = { a: 'one', b: 'two', a: 'three' };\n console.log(obj);"
   },
   {
     "question": "What is the output of the following code?",
@@ -41,7 +41,7 @@
     "Answer": "A",
     "Language": "Javascript",
     "Level": "Intermediate",
-    "Code": "(function immediateA(a) { return (function immediateB(b) { console.log(a); // What is logged? })(1); })(0);"
+    "Code": "(function immediateA(a) {\n  return (function immediateB(b) {\n    console.log(a); // What is logged?\n  })(1);\n})(0);"
   },
   {
     "question": "What is the output of the following code?",
@@ -52,7 +52,7 @@
     "Answer": "D",
     "Language": "Javascript",
     "Level": "Intermediate",
-    "Code": "for (var i = 0; i < 3; i++) { setTimeout(function log() { console.log(i); // What is logged? }, 1000); }"
+    "Code": "for (var i = 0; i < 3; i++) {\n  setTimeout(function log() {\n    console.log(i); // What is logged?\n  }, 1000);\n}"
   },
   {
     "question": "What is the output of the following code?",

@@ -51,13 +51,11 @@ export default function Quiz(question: { question: Question }) {
       {
         rightAnswer &&
           <div>
-              <div className="container">
-                <h2 className="title">
-                  <span className="title-word title-word-1 mr-4">Congratulation</span>
-                  <span className="title-word title-word-2 mr-4">you have</span>
-                  <span className="title-word title-word-3 mr-4">won</span>
-                  <span className="title-word title-word-4">goodies!</span>
-                </h2>
+              <div className="h-screen w-screen">
+                <div className="flex flex-col justify-center items-center h-full">
+                  <div className="title-word title-word-1 text-9xl text-extra-bold uppercase">Congratulation!</div>
+                  <div className="text-7xl text-[#FFE500] text-extra-bold uppercase">You have won goodies!</div>
+                </div>
               </div>
               <Congratulation />
           </div>
@@ -66,7 +64,7 @@ export default function Quiz(question: { question: Question }) {
         wrongAnswer &&
         <div className="wrong-answer" id="ui">
           {
-            new Array(40).fill('').map((_,i) => <div key={`wrong-answer-${i}`} className="text">Wrong Answer :(</div>)
+            new Array(40).fill('').map((_,i) => <div key={`wrong-answer-${i}`} className="text">Oops Wrong Answer :(</div>)
           }
           
         </div>
@@ -95,7 +93,7 @@ export default function Quiz(question: { question: Question }) {
             </div>
             <div className="flex flex-col gap-[44px] basis-2/5">
               <div>
-                <label className="text-2xl" key={randomQuestion.A}>
+                <label className="text-2xl cursor-pointer" key={randomQuestion.A}>
                   <input
                     className="mr-4 h-6 w-6 accent-[#FFE500]"
                     type="radio"
@@ -107,7 +105,7 @@ export default function Quiz(question: { question: Question }) {
                 </label>
               </div>
               <div>
-                <label className="text-2xl" key={randomQuestion.B}>
+                <label className="text-2xl cursor-pointer" key={randomQuestion.B}>
                   <input
                     className="mr-4 h-6 w-6 accent-[#FFE500]"
                     type="radio"
@@ -119,7 +117,7 @@ export default function Quiz(question: { question: Question }) {
                 </label>
               </div>
               <div>
-                <label className="text-2xl" key={randomQuestion.C}>
+                <label className="text-2xl cursor-pointer" key={randomQuestion.C}>
                   <input
                     className="mr-4 h-6 w-6 accent-[#FFE500]"
                     type="radio"
@@ -131,7 +129,7 @@ export default function Quiz(question: { question: Question }) {
                 </label>
               </div>
               <div>
-                <label className="text-2xl" key={randomQuestion.D}>
+                <label className="text-2xl cursor-pointer" key={randomQuestion.D}>
                   <input
                     className="mr-4 h-6 w-6 accent-[#FFE500]"
                     type="radio"

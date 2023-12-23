@@ -37,7 +37,7 @@
     "A": "0",
     "B": "1",
     "C": "Error",
-    "D": null,
+    "D": "null",
     "Answer": "A",
     "Language": "Javascript",
     "Level": "Intermediate",
@@ -408,7 +408,7 @@
     "Code": "String a = new String(“gdgpune23”);\nString b = new String(“gdgpune23”);\nStrinc c = “gdgpune23”;\nString d = “gdgpune23”;"
   },
   {
-    "question": "What is the output?",
+    "question": null,
     "A": "1 3 2 4",
     "B": "4 2 3 1",
     "C": "1 2 3 4",
@@ -416,7 +416,7 @@
     "Answer": "C",
     "Language": "Java",
     "Level": "Intermediate",
-    "Code": "import java.util.*;\n\npublic class Main {\n    public static void main(String[] args)\n    {\n        PriorityQueue<Integer> queue = new PriorityQueue<>();\n        queue.add(4);\n        queue.add(3);\n        queue.add(2);\n        queue.add(1);\n\n        while (queue.isEmpty() == false) {\n            System.out.printf(\"%d\", queue.remove());\n        }\n    }\n}"
+    "Code": "import java.util.*;\npublic class Main {\n    public static void main(String[] args)\n    {\n        PriorityQueue<Integer> queue = new PriorityQueue<>();\n        queue.add(4);\n        queue.add(3);\n        queue.add(2);\n        queue.add(1);\n        while (queue.isEmpty() == false) {\n            System.out.printf(\"%d\", queue.remove());\n        }\n    }\n}"
   },
   {
     "question": "Which class can compile given these declarations?\ninterface One {\n    default void method() {\n        System.out.println(\"One\");\n    }\n}\n\ninterface Two {\n    default void method () {\n        System.out.println(\"One\");\n    }\n}",
@@ -449,7 +449,7 @@
     "Answer": "A",
     "Language": "Java",
     "Level": "Intermediate",
-    "Code": "class MainClass {\n    final String message() {\n        return \"Hello!\";\n    }\n}\n\nclass Main equestiontends MainClass {\n    public static void main(String[] args) {\n        System.out.println(message());\n    }\n\n     String message() {\n         return \"World!\";\n     }\n }"
+    "Code": "class MainClass {\n    final String message() {\n        return \"Hello!\";\n    }\n}\nclass Main equestiontends MainClass {\n    public static void main(String[] args) {\n        System.out.println(message());\n    }\n  String message() {\n     return \"World!\";\n     }}"
   },
   {
     "question": "Given this code, which command will output?",

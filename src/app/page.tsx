@@ -36,8 +36,7 @@ export default function Home() {
   const LANGUAGE = {
     JavaScript : 'Javascript',
     Kotlin: 'Kotlin',
-    Java: 'Java',
-    General: 'General'
+    Java: 'Java'
   };
 
   const onSelectLanguage = (language) => setSelectedLanguage(language);

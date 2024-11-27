@@ -1,5 +1,6 @@
 'use client'
-import {useState} from "react";
+
+import { useEffect, useState } from "react";
 import data from '../../assets/questions.json';
 import Quiz from './quiz';
 
@@ -30,21 +31,46 @@ export interface Question {
   Level: string;
   Code: string;
 }
+
+const LANGUAGE = {
+  JavaScript : 'Javascript',
+  Kotlin: 'Kotlin',
+  Java: 'Java'
+};
+
 export default function Home() {
   const [selectedLanguage, setSelectedLanguage] = useState(null);
+  const [questionIndex, setQuestionIndex] = useState({
+    [LANGUAGE.JavaScript]: -1,
+    [LANGUAGE.Kotlin]: -1,
+    [LANGUAGE.Java]: -1
+  });
+  const [currentQuestion, setCurrentQuestion] = useState(null);
 
-  const LANGUAGE = {
-    JavaScript : 'Javascript',
-    Kotlin: 'Kotlin',
-    Java: 'Java'
+  useEffect(() => {
+    const index = JSON.parse(localStorage.getItem('questionIndex') || 'null');
+    if(index) {
+      setQuestionIndex(index);
+    }
+  }, []);
+
+  const onSelectLanguage = (language) => {
+    setSelectedLanguage(language);
+    const filteredQuestions = data.filter(ques => ques['Language'] === language);
+    let index = questionIndex[language] + 1;
+    const question = filteredQuestions[index % filteredQuestions.length];
+
+    setQuestionIndex(prevIndex => {
+      const newIndex = {
+        ...prevIndex,
+        [language]: index % filteredQuestions.length
+      };
+      localStorage.setItem('questionIndex', JSON.stringify(newIndex));
+      return newIndex;
+    });
+
+    setCurrentQuestion(question);
   };
-
-  const onSelectLanguage = (language) => setSelectedLanguage(language);
-
-  const getQuestionByLanguage = () : Question => {
-    const filteredQuestions = data.filter(ques => ques['Language'] === selectedLanguage);
-    return filteredQuestions[Math.floor(Math.random()*filteredQuestions.length)]
-  }
 
   return (
     <div className="h-screen overflow-hidden">
@@ -64,7 +90,7 @@ export default function Home() {
       {
         selectedLanguage &&
         <div className="h-full">
-          <Quiz question={getQuestionByLanguage()} />
+          <Quiz question={currentQuestion} />
         </div>
       }
     </div>

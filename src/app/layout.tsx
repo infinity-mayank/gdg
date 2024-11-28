@@ -16,25 +16,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <div className="context w-full">
-          {children}
-        </div>
-        <div className="area" >
-          <ul className="circles">
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-          </ul>
-        </div>
-      </body>
+    <body className={inter.className}>
+    <div className="context w-full">
+      {children}
+    </div>
+    <div className="snow"></div>
+    </body>
     </html>
   )
 }

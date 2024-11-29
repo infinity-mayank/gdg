@@ -527,6 +527,172 @@
     "Language": "Java",
     "Level": "Intermediate",
     "Code": "public class A { \n    public static void main(String[] args) \n    { \n        if (true) \n            break; \n    } \n} "
+  },
+  {
+    "TEST": 123,
+    "question": "What is the output of this code?",
+    "A": "12345",
+    "B": "1234512345",
+    "C": "It will not compile.",
+    "D": "Exception at runtime.",
+    "Answer": "A",
+    "Language": "Java",
+    "Level": "Beginner",
+    "Code": "class Main {\n    public static void main(String[] args) {\n        String num = \"12345\";\n        for (int i = 0; i < 1; i++) {\n            System.out.print(num);\n        }\n    }\n}"
+  },
+  {
+    "question": "What does this code output?",
+    "A": "10",
+    "B": "100",
+    "C": "Compilation error.",
+    "D": "0",
+    "Answer": "C",
+    "Language": "Java",
+    "Level": "Intermediate",
+    "Code": "public class Main {\n    public static void main(String[] args) {\n        int x = 10;\n        x = 010;\n        System.out.println(x);\n    }\n}"
+  },
+  {
+    "question": "What will happen if the following code is executed?",
+    "A": "StackOverflowError",
+    "B": "OutOfMemoryError",
+    "C": "RuntimeException",
+    "D": "Infinite recursion",
+    "Answer": "A",
+    "Language": "Java",
+    "Level": "Intermediate",
+    "Code": "class Main {\n    public static void main(String[] args) {\n        recursive();\n    }\n    static void recursive() {\n        recursive();\n    }\n}"
+  },
+  {
+    "question": "What is the output of the following code?",
+    "A": "2",
+    "B": "3",
+    "C": "4",
+    "D": "Compilation error.",
+    "Answer": "D",
+    "Language": "Java",
+    "Level": "Beginner",
+    "Code": "class Main {\n    public static void main(String[] args) {\n        int a = 5;\n        double b = 3.2;\n        System.out.println(a / b);\n    }\n}"
+  },
+  {
+    "question": "Which statement about this code is true?",
+    "A": "It compiles and prints true.",
+    "B": "It compiles and prints false.",
+    "C": "It does not compile.",
+    "D": "It throws a runtime exception.",
+    "Answer": "C",
+    "Language": "Java",
+    "Level": "Intermediate",
+    "Code": "class Main {\n    public static void main(String[] args) {\n        boolean result = \"test\" instanceof String;\n        System.out.println(result);\n    }\n}"
+  },
+  {
+    "question": "What is the result of this code?",
+    "A": "It prints 2.0",
+    "B": "It prints 2",
+    "C": "It does not compile.",
+    "D": "It throws an ArithmeticException.",
+    "Answer": "C",
+    "Language": "Java",
+    "Level": "Intermediate",
+    "Code": "public class Main {\n    public static void main(String[] args) {\n        double result = 5 / 2;\n        System.out.println(result);\n    }\n}"
+  },
+  {
+    "question": "What does the following code print?",
+    "A": "1",
+    "B": "2",
+    "C": "Compilation error.",
+    "D": "Runtime error.",
+    "Answer": "C",
+    "Language": "Java",
+    "Level": "Intermediate",
+    "Code": "class Main {\n    public static void main(String[] args) {\n        int arr[5] = {1, 2, 3, 4, 5};\n        System.out.println(arr[1]);\n    }\n}"
+  },
+  {
+    "question": "What does this code print?",
+    "A": "123",
+    "B": "12",
+    "C": "Compilation error.",
+    "D": "Exception at runtime.",
+    "Answer": "B",
+    "Language": "Java",
+    "Level": "Beginner",
+    "Code": "class Main {\n    public static void main(String[] args) {\n        System.out.print(\"1\");\n        System.out.print(\"2\");\n    }\n}"
+  },
+  {
+    "question": "What is the output of this program?",
+    "A": "30",
+    "B": "15",
+    "C": "Compilation error.",
+    "D": "Runtime error.",
+    "Answer": "C",
+    "Language": "Java",
+    "Level": "Beginner",
+    "Code": "public class Main {\n    public static void main(String[] args) {\n        int a, b;\n        System.out.println(a + b);\n    }\n}"
+  },
+  {
+    "question": "What happens when this code runs?",
+    "A": "Compilation error.",
+    "B": "Infinite loop.",
+    "C": "Prints numbers from 0 to 4.",
+    "D": "Runtime error.",
+    "Answer": "C",
+    "Language": "Java",
+    "Level": "Beginner",
+    "Code": "class Main {\n    public static void main(String[] args) {\n        for (int i = 0; i < 5; i++) {\n            System.out.println(i);\n        }\n    }\n}"
+  },
+  {
+    "question": "What is the result of the code below?",
+    "A": "Hello World",
+    "B": "Compilation error.",
+    "C": "Runtime exception.",
+    "D": "Hello null",
+    "Answer": "D",
+    "Language": "Java",
+    "Level": "Intermediate",
+    "Code": "class Main {\n    public static void main(String[] args) {\n        String message = null;\n        System.out.println(\"Hello \" + message);\n    }\n}"
+  },
+  {
+    "question": "What does this code print?",
+    "A": "false",
+    "B": "true",
+    "C": "Compilation error.",
+    "D": "Runtime exception.",
+    "Answer": "A",
+    "Language": "Java",
+    "Level": "Intermediate",
+    "Code": "class Main {\n    public static void main(String[] args) {\n        boolean result = (5 > 10);\n        System.out.println(result);\n    }\n}"
+  },
+  {
+    "question": "What is the output of the following code?",
+    "A": "true",
+    "B": "false",
+    "C": "null",
+    "D": "Compilation error.",
+    "Answer": "B",
+    "Language": "Java",
+    "Level": "Intermediate",
+    "Code": "class Main {\n    public static void main(String[] args) {\n        String str1 = \"Hello\";\n        String str2 = \"World\";\n        System.out.println(str1.equals(str2));\n    }\n}"
+  },
+  {
+    "question": "What happens when this code is executed?",
+    "A": "Compilation error.",
+    "B": "Prints: \"Hello!\"",
+    "C": "Prints: \"World!\"",
+    "D": "Runtime exception.",
+    "Answer": "A",
+    "Language": "Java",
+    "Level": "Intermediate",
+    "Code": "class Main {\n    final String message() {\n        return \"Hello!\";\n    }\n    public static void main(String[] args) {\n        System.out.println(message());\n    }\n}"
+  },
+  {
+    "question": "What does the following code print?",
+    "A": "12",
+    "B": "Compilation error.",
+    "C": "3",
+    "D": "6",
+    "Answer": "D",
+    "Language": "Java",
+    "Level": "Intermediate",
+    "Code": "class Main {\n    public static void main(String[] args) {\n        int x = 2;\n        int y = 3;\n        System.out.println(x * y);\n    }\n}"
   }
 ]
 

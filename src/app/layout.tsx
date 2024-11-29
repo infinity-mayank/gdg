@@ -20,7 +20,6 @@ export default function RootLayout({
     <div className="context w-full">
       {children}
     </div>
-    <div className="snow"></div>
     </body>
     </html>
   )

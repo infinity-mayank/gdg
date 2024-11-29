@@ -35,7 +35,8 @@ export interface Question {
 const LANGUAGE = {
   JavaScript : 'Javascript',
   Kotlin: 'Kotlin',
-  Java: 'Java'
+  Java: 'Java',
+  General: 'General'
 };
 
 export default function Home() {
@@ -82,7 +83,7 @@ export default function Home() {
         <div className="h-full flex flex-row items-center justify-around p-4">
           {
             Object.keys(LANGUAGE).map(language =>
-              <button key={LANGUAGE[language]} className="btn-primary hover:bg-[#FFE500] hover:text-[#0f0f23] text-[#FFE500] border-[#FFE500] btn border-2 text-3xl font-bold p-6" onClick={() => onSelectLanguage(LANGUAGE[language])}>{language}</button>
+              <button key={LANGUAGE[language]} className="btn-primary hover:bg-[#FFE500] hover:text-[#0f0f23] text-[#FFE500] border-[#FFE500] btn border-2 text-3xl font-bold p-6 rounded-xl" onClick={() => onSelectLanguage(LANGUAGE[language])}>{language}</button>
             )
           }
         </div>
